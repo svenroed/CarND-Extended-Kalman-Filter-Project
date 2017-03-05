@@ -6,3 +6,7 @@ build/
 
 # editor config
 .vscode/
+
+
+.idea
+cmake-build-debug
