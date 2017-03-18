@@ -9,7 +9,7 @@
 #include "tools.h"
 
 class FusionEKF {
-public:
+ public:
   /**
   * Constructor.
   */
@@ -30,12 +30,16 @@ public:
   */
   KalmanFilter ekf_;
 
-private:
+ private:
   // check whether the tracking toolbox was initiallized or not (first measurement)
   bool is_initialized_;
 
   // previous timestamp
   long previous_timestamp_;
+
+  // noise as suggested in "Lidar and Radar Fusion with Kalman Filters in C++" lesson
+  float noise_ax;
+  float noise_ay;
 
   // tool object used to compute Jacobian and RMSE
   Tools tools;

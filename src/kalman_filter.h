@@ -6,7 +6,7 @@ using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
 class KalmanFilter {
-public:
+ public:
 
   // state vector
   VectorXd x_;
@@ -46,7 +46,7 @@ public:
    * @param Q_in Process covariance matrix
    */
   void Init(VectorXd &x_in, MatrixXd &P_in, MatrixXd &F_in,
-      MatrixXd &H_in, MatrixXd &R_in, MatrixXd &Q_in);
+            MatrixXd &H_in, MatrixXd &R_in, MatrixXd &Q_in);
 
   /**
    * Prediction Predicts the state and the state covariance
@@ -66,7 +66,6 @@ public:
    * @param z The measurement at k+1
    */
   void UpdateEKF(const VectorXd &z);
-
 
 };
 
